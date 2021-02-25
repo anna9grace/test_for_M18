@@ -17,7 +17,6 @@
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgstore": "^7.0.1",
     "gulp-webp": "^4.0.1",
-    "stylelint": "9.10.x",
     "del": "^4.1.1"
   },
   "scripts": {
