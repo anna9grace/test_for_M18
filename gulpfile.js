@@ -15,7 +15,6 @@ const svgstore = require("gulp-svgstore");
 const webp = require("gulp-webp");
 const rigger = require(`gulp-rigger`);
 
-
 const styles = () => {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -56,7 +55,6 @@ const sprite = () => {
 }
 exports.sprite = sprite;
 
-
 const server = (done) => {
   sync.init({
     server: {
@@ -73,19 +71,16 @@ const server = (done) => {
 };
 exports.server = server;
 
-
 const reload = (done) => {
   sync.reload();
   done();
 };
 exports.reload = reload;
 
-
 const clean = () => {
   return del("build");
 };
 exports.clean = clean;
-
 
 const copy = () => {
   return gulp.src([
@@ -108,12 +103,6 @@ const scripts = () => {
     .pipe(gulp.dest("build/js"))
 };
 exports.scripts = scripts;
-
-
-gulp.task(`html`, function () {
-  return gulp.src(`source/*.html`)
-      .pipe(gulp.dest(`build`));
-});
 
 const html = () => {
   return gulp.src("source/*.html")
