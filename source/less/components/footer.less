@@ -1,3 +1,15 @@
+footer
+{
+    background-color: @bg-color-medium;
+    text-align: center;
+}
+
+footer h2
+{
+    .font-sizes (21px; 26px);
+    font-weight: 400;
+}
+
 .footer-socials a
 {
     .sizes (50px; 50px);
@@ -9,4 +21,40 @@
 {
     height: 100%;
     object-fit: contain;
+}
+
+.footer-socials ul
+{
+    .list-reset();
+    display: flex;
+    justify-content: center;
+}
+
+.footer-socials > p,
+.footer-contacts > p > span,
+.footer-copyright
+{
+    .font-sizes (16px; 24px);
+    color: @main-color-medium;
+}
+
+.footer-contacts
+{
+    .font-sizes (21px; 30px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    letter-spacing: -0.1px;
+}
+
+.footer-contacts > p
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.footer-copyright
+{
+    border-top: 1px solid @border-color;
 }
