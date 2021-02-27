@@ -123,23 +123,31 @@
             <h2>Узнайте о запуске сервиса первым</h2>
             <form action="#" method="post" id="subscribe">
                 <p>Первым 10 клиентам стальная входная дверь в подарок</p>
-                    <label class="visually-hidden" for="customer-name">Введите Ваше имя и фамилию</label>
+                <label>
+                    <span>Имя и фамилия*</span>
                     <input
-                        type="text" name="name" id="customer-name" placeholder="Имя и фамилия*" required
+                        type="text" name="name" placeholder="Имя и фамилия*" required
                     />
-                    <label class="visually-hidden" for="customer-email">Введите адрес Вашей почты</label>
+                </label>
+                <label class="error">
+                    <span>Е-mail адрес*</span>
                     <input
-                        type="email" name="email" id="customer-email" placeholder="Е-mail адрес*" required
+                        type="email" name="email" placeholder="Е-mail адрес*" required
                     />
-                    <label class="visually-hidden" for="customer-phone">Введите Ваш номер телефона</label>
+                </label>
+                <label class="success">
+                    <span>Телефон</span>
                     <input
-                        type="tel" name="phone" id="customer-phone" pattern="[\+]{0,1}[78]{1}[0-9]{10}" placeholder="Телефон"
+                        type="tel" name="phone" pattern="[\+]{0,1}[78]{1}[0-9]{10}" placeholder="Телефон"
                     />
-                    <button type="submit" class="button">Подписаться</button>
-                    <small>* Обязательные для заполнения поля</small>
-                    <a href="#">Политика конфиденциальности</a>
+                </label>
+                <button type="submit" class="button">Подписаться</button>
+                <small>* Обязательные для заполнения поля</small>
+                <a href="#">Политика конфиденциальности</a>
             </form>
-            <p class="subscribe-success hidden">Спасибо! Мы будем держать вас в курсе обновлений</p>
+            <div class="subscribe-success hidden">
+                <p>Спасибо! Мы будем держать вас в курсе обновлений</p>
+            </div>
         </section>
     </main>
     <footer id="footer-contacts">
