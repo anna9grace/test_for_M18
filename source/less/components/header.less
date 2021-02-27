@@ -72,7 +72,7 @@ html > body > header
     padding-left: 4.5%;
 }
 
-.header-promo > h1
+.header-promo h1
 {
     .font-sizes (64px; 64px);
     margin-bottom: 6px;
@@ -176,6 +176,7 @@ html > body > header
         content: "";
         margin-bottom: 16px;
         background: url("../img/play.svg") center center no-repeat;
+        background-size: contain;
     }
 
     &:hover,
@@ -186,11 +187,109 @@ html > body > header
         &::before
         {
             background: url("../img/play_hover.svg") center center no-repeat;
+            background-size: contain;
         }
     }
 
     &:active
     {
         opacity: 0.7;
+    }
+}
+
+@media (max-width: @max-tablet-width)
+{
+    html > body > header
+    {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .header-promo
+    {
+        flex-basis: auto;
+        height: 100vh;
+        margin-top: -131px;
+        padding-right: 4.5%;
+        margin-bottom: 20px;
+    }
+
+    .header-video
+    {
+        height: 60vw;
+        width: 100%;
+        min-width: 100%;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: @max-mobile-width)
+{
+    .header-wrapper {
+        padding: 20px 0;
+    }
+
+    .header-logo
+    {
+        height: 50px;
+    }
+
+    .header-logo > img
+    {
+        .sizes (160px; 44px);
+    }
+
+    .header-logo > a
+    {
+        margin-bottom: 0;
+        font-size: 0;
+    }
+
+    .header-promo
+    {
+        min-width: 0;
+        max-width: 465px;
+        align-items: center;
+        margin: -70px auto 0 auto;
+        padding: 140px 20px 20px;
+    }
+
+    .header-promo h1
+    {
+        .font-sizes (36px; 36px);
+    }
+
+    .header-promo > p
+    {
+        .font-sizes (17px; 24px);
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .header-promo > a:last-of-type
+    {
+        .font-sizes (14px; 16px);
+        align-self: flex-start;
+    }
+
+    .promo-subscribe > small
+    {
+        display: none;
+    }
+
+    .header-video
+    {
+        height: 90vw;
+    }
+
+    .header-video > button
+    {
+        transform: translateY(50%);
+        &::before
+        {
+            .sizes (100px; 100px);
+        }
     }
 }
