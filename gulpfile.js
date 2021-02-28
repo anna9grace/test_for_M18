@@ -55,7 +55,28 @@ const sprite = () => {
 }
 exports.sprite = sprite;
 
-const server = (done) => {
+const scripts = () => {
+    return gulp.src("source/js/**/*.js")
+      .pipe(plumber())
+      .pipe(rigger())
+      .pipe(gulp.dest("build/js"))
+  };
+exports.scripts = scripts;
+
+const reload = (done) => {
+    sync.reload();
+    done();
+  };
+exports.reload = reload;
+
+
+const html = () => {
+    return gulp.src("source/*.html")
+        .pipe(gulp.dest("build"));
+  };
+exports.html = html;
+
+const server = () => {
   sync.init({
     server: {
       baseDir: "build"
@@ -64,18 +85,11 @@ const server = (done) => {
     notify: false,
     ui: false,
   });
-  done();
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/js/**/*.js", gulp.series("scripts"));
+  gulp.watch("source/js/**/*.js").on("change", gulp.series("scripts", "reload"));
   gulp.watch("source/*.html").on("change", gulp.series("html", "reload"));
 };
 exports.server = server;
-
-const reload = (done) => {
-  sync.reload();
-  done();
-};
-exports.reload = reload;
 
 const clean = () => {
   return del("build");
@@ -95,20 +109,6 @@ const copy = () => {
   .pipe(gulp.dest("build"));
 };
 exports.copy = copy;
-
-const scripts = () => {
-  return gulp.src("source/js/**/*.js")
-    .pipe(plumber())
-    .pipe(rigger())
-    .pipe(gulp.dest("build/js"))
-};
-exports.scripts = scripts;
-
-const html = () => {
-  return gulp.src("source/*.html")
-      .pipe(gulp.dest("build"));
-};
-exports.html = html;
 
 const build = gulp.series(
   clean, images, createWebp, sprite, copy, styles, scripts
