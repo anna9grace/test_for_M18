@@ -1,11 +1,11 @@
-footer
+html > body > footer
 {
     padding-top: 73px;
     background-color: @bg-color-medium;
     text-align: center;
 }
 
-footer h2
+html > body > footer h2
 {
     .font-sizes (21px; 26px);
     margin-bottom: 0;
@@ -131,4 +131,53 @@ footer h2
     border-top: 1px solid @border-color;
     margin: 0;
     padding: 35px;
+}
+
+@media (max-width: @max-tablet-width)
+{
+    .footer-contacts
+    {
+        justify-content: center;
+    }
+
+    .footer-contacts > p
+    {
+        flex-basis: 100%;
+        margin: 0 0 20px 0;
+        order: -1;
+    }
+
+    .footer-contacts > a
+    {
+        margin: 20px;
+    }
+}
+
+@media (max-width: @max-mobile-width)
+{
+    html > body > footer
+    {
+        padding: 50px 15px 0;
+    }
+
+    .footer-socials > p
+    {
+        display: none;
+    }
+
+    .footer-contacts
+    {
+        flex-direction: column;
+        margin-bottom: 45px;
+    }
+
+    .footer-contacts > a
+    {
+        .font-sizes (18px; 28px);
+    }
+
+    .footer-copyright
+    {
+        padding: 20px;
+    }
 }
