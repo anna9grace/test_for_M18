@@ -1,9 +1,9 @@
 'use strict';
 
-const form = document.querySelector( '.subscribe form' );
-const formFields = form.querySelectorAll( 'input' );
-const submitBtn = form.querySelector( 'button' );
-const successMessage = document.querySelector( '.subscribe-success' );
+const form = document.querySelector( ".subscribe form" );
+const formFields = form.querySelectorAll( "input" );
+const submitBtn = form.querySelector( "button" );
+const successMessage = document.querySelector( ".subscribe-success" );
 
 if ( form &&  submitBtn && formFields.length > 0 && successMessage )
 {
@@ -12,33 +12,33 @@ if ( form &&  submitBtn && formFields.length > 0 && successMessage )
         for ( const field of formFields ) {
             if ( !field.value )
             {
-                field.classList.add( 'reset' );
+                field.classList.add( "reset" );
             }
 
-            field.addEventListener( 'focus', () =>
+            field.addEventListener( "focus", () =>
             {
-                field.classList.remove( 'reset' );
+                field.classList.remove( "reset" );
             } )
-            submitBtn.addEventListener( 'click', activateFields )
+            submitBtn.addEventListener( "click", activateFields )
         }
     }
 
     const activateFields = () =>
     {
         for ( const field of formFields ) {
-            field.classList.remove( 'reset' );
+            field.classList.remove( "reset" );
         }
     }
 
-    form.addEventListener( 'submit', ( evt ) =>
+    form.addEventListener( "submit", ( evt ) =>
     {
         evt.preventDefault();
 
-        successMessage.classList.remove( 'hidden' );
+        successMessage.classList.remove( "hidden" );
 
         setTimeout( () =>
         {
-            successMessage.classList.add( 'hidden' );
+            successMessage.classList.add( "hidden" );
 
         }, 2000 );
 

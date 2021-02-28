@@ -24,16 +24,17 @@
 {
     .list-reset();
     display: flex;
-    justify-content: center;
 }
 
 .styles li
 {
     .sizes (935px; 500px);
     display: flex;
+    position: relative;
     flex-shrink: 0;
     width: 100%;
     overflow: hidden;
+    transition: left, 0.5s ease-in-out;
 }
 
 .styles li > picture,
@@ -45,6 +46,7 @@
 .styles li img
 {
     object-fit: cover;
+    object-position: left;
     max-width: 100%;
     min-height: 100%;
     opacity: 0.6;
@@ -56,6 +58,7 @@
     flex-grow: 0;
     flex-shrink: 0;
     margin: 0;
+    transition: all 0.5s;
 }
 
 .styles li > p span
@@ -63,6 +66,7 @@
     .font-sizes (13px; 20px);
     display: none;
     color: @main-color-medium;
+    transition: all 0.5s;
 }
 
 .styles li.active p
@@ -106,15 +110,18 @@
         transform-origin: center;
     }
 
-    &:hover,
-    &:focus
+    &:hover
     {
-        outline: none;
         background-image: url("../img/single-arrow_hover.svg");
     }
 
     &:active
     {
         opacity: 0.7;
+    }
+
+    &:disabled
+    {
+        visibility: hidden;
     }
 }
