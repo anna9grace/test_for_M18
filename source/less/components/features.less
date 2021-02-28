@@ -1,8 +1,9 @@
 .features
 {
-	.font-sizes (16px; 24px);
 	padding-top: 133px;
 	padding-bottom: 98px;
+
+	.font-sizes (16px; 24px);
 }
 
 .features h2
@@ -13,27 +14,33 @@
 .features > p
 {
 	margin-top: 7px;
-	color: @additional-accent-color;
+	margin-bottom: 60px;
+
 	font-weight: 500;
-	text-transform: uppercase;
 	letter-spacing: 0.62px;
+	text-transform: uppercase;
+
+	color: @additional-accent-color;
 }
 
 .features ul
 {
-	.list-reset();
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 60px;
 	justify-content: space-between;
+
+	margin-top: 60px;
+
+	.list-reset();
 }
 
 .features li
 {
-	border-top: 4px solid @border-accent-color;
 	flex-basis: 46%;
 	padding: 35px 0 39px 0;
 	margin-bottom: 56px;
+
+	border-top: 4px solid @border-accent-color;
 }
 
 .features li > b
@@ -44,9 +51,9 @@
 
 .features li > p
 {
+	margin: 10px 0 0 0;
+
 	color: @main-color-medium;
-	margin: 0;
-	margin-top: 10px;
 }
 
 .features li:last-of-type
@@ -54,15 +61,19 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	text-align: center;
-	border: 4px solid @border-accent-color;
+
 	padding-bottom: 35px;
+
+	text-align: center;
+
+	border: 4px solid @border-accent-color;
 }
 
 .features li:last-of-type > p
 {
 	.font-sizes (64px; 60px);
 	font-weight: 500;
+
 	color: @main-color-dark;
 }
 
@@ -75,15 +86,15 @@
 
 	.features ul
 	{
-		margin-left: -10px;
 		margin-right: -10px;
+		margin-left: -10px;
 	}
 
 	.features li
 	{
+		flex-grow: 1;
 		min-width: 320px;
 		margin: 0 10px;
-		flex-grow: 1;
 	}
 }
 
@@ -92,6 +103,7 @@
 	.features
 	{
 		padding: 50px 20px 50px;
+
 		text-align: center;
 	}
 
@@ -102,14 +114,16 @@
 
 	.features > p
 	{
-		font-size: 14px;
 		margin-top: 20px;
+
+		font-size: 14px;
 	}
 
 	.features li:last-of-type > p
 	{
 		.font-sizes (40px; 40px);
 		font-weight: 500;
+
 		color: @main-color-dark;
 	}
 }

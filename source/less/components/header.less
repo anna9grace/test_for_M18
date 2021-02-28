@@ -9,23 +9,27 @@ html > body > header
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
 	max-width: 1880px;
 	height: 100%;
-	margin: auto;
 	padding: 20px;
+	margin: auto;
 }
 
 .header-logo
 {
-	.font-sizes (21px; 25px);
+	z-index: 2;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 111px;
+
 	width: 100%;
-	margin-left: 5%;
+	height: 111px;
 	margin-right: 5%;
-	z-index: 2;
+	margin-left: 5%;
+
+	.font-sizes (21px; 25px);
 }
 
 .header-logo > img
@@ -36,21 +40,26 @@ html > body > header
 .header-logo > a
 {
 	display: flex;
+
 	margin-bottom: 10px;
 
 	&::before
 	{
-		.sizes (24px; 24px);
-		content: "";
 		margin-right: 6px;
+
+		.sizes (24px; 24px);
+
+		content: "";
+
 		background: url("../img/phone.svg") center center no-repeat;
 	}
 
 	&:hover,
 	&:focus
 	{
-		outline: none;
 		color: @accent-color;
+
+		outline: none;
 	}
 
 	&:active
@@ -61,64 +70,76 @@ html > body > header
 
 .header-promo
 {
-	flex-basis: 33%;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+
+	flex-basis: 33%;
 	min-width: 535px;
-	margin-top: -111px;
+	height: 100%;
 	padding-top: 111px;
 	padding-bottom: 27px;
 	padding-left: 4.5%;
+	margin-top: -111px;
 }
 
 .header-promo h1
 {
-	.font-sizes (64px; 64px);
-	margin-bottom: 6px;
 	margin-top: auto;
+	margin-bottom: 6px;
+
+	.font-sizes (64px; 64px);
 	font-weight: 500;
 	letter-spacing: -0.5px;
 }
 
 .header-promo > p
 {
-	.font-sizes (21px; 30px);
 	width: 90%;
-	margin-bottom: 45px;
 	padding-left: 6px;
+	margin-bottom: 45px;
+
+	.font-sizes (21px; 30px);
 }
 
 .promo-subscribe
 {
 	display: flex;
 	align-items: center;
+
 	margin-left: 7px;
 	margin-bottom: 80px;
 }
 
 .promo-subscribe > small
 {
-	.font-sizes (16px; 24px);
 	margin-left: 34px;
+
+	.font-sizes (16px; 24px);
+
 	color: @main-color-medium;
 }
 
 .header-promo > a:last-of-type
 {
-	.font-sizes (16px; 18px);
 	position: relative;
-	margin-top: auto;
+
 	padding-left: 65px;
+	margin-top: auto;
+
+	.font-sizes (16px; 18px);
 	font-weight: 500;
+
 	color: @accent-color;
 
 	&::before
 	{
-		.sizes (41px; 32px);
-		content: "";
-		left: 2%;
 		position: absolute;
+		left: 2%;
+
+		.sizes (41px; 32px);
+
+		content: "";
+
 		background: url("../img/arrows.svg") center center no-repeat;
 	}
 
@@ -141,6 +162,7 @@ html > body > header
 .header-video
 {
 	position: relative;
+
 	flex-basis: 51%;
 	height: 100%;
 	margin-top: -111px;
@@ -149,32 +171,44 @@ html > body > header
 .header-video > img
 {
 	display: block;
-	object-fit: cover;
+
 	height: 100%;
+
+	object-fit: cover;
 }
 
 .header-video > button
 {
-	.font-sizes (21px; 30px);
 	position: absolute;
+	right: 0;
 	bottom: 50%;
 	left: 0;
-	right: 0;
+
 	display: flex;
 	flex-direction: column;
-	margin: auto;
-	color: @accent-color;
-	border: none;
-	background: none;
 	align-items: center;
-	transform: translateY(40%);
+
+	margin: auto;
+
+	.font-sizes (21px; 30px);
+
 	cursor: pointer;
+
+	color: @accent-color;
+	background: none;
+
+	border: none;
+
+	transform: translateY(40%);
 
 	&::before
 	{
-		.sizes (255px; 255px);
-		content: "";
 		margin-bottom: 16px;
+
+		.sizes (255px; 255px);
+
+		content: "";
+
 		background: url("../img/play.svg") center center no-repeat;
 		background-size: contain;
 	}
@@ -202,6 +236,7 @@ html > body > header
 	html > body > header
 	{
 		flex-direction: column;
+
 		height: auto;
 	}
 
@@ -209,16 +244,16 @@ html > body > header
 	{
 		flex-basis: auto;
 		height: 100vh;
-		margin-top: -131px;
 		padding-right: 4.5%;
+		margin-top: -131px;
 		margin-bottom: 20px;
 	}
 
 	.header-video
 	{
-		height: 60vw;
 		width: 100%;
 		min-width: 100%;
+		height: 60vw;
 		margin-top: 50px;
 	}
 
@@ -247,16 +282,18 @@ html > body > header
 	.header-logo > a
 	{
 		margin-bottom: 0;
+
 		font-size: 0;
 	}
 
 	.header-promo
 	{
+		align-items: center;
+
 		min-width: 0;
 		max-width: 465px;
-		align-items: center;
-		margin: -70px auto 0 auto;
 		padding: 140px 20px 20px;
+		margin: -70px auto 0 auto;
 	}
 
 	.header-promo h1
@@ -266,17 +303,19 @@ html > body > header
 
 	.header-promo > p
 	{
-		.font-sizes (17px; 24px);
 		width: 100%;
 		padding-left: 0;
 		margin-bottom: 60px;
+
+		.font-sizes (17px; 24px);
 		text-align: center;
 	}
 
 	.header-promo > a:last-of-type
 	{
-		.font-sizes (14px; 16px);
 		align-self: flex-start;
+
+		.font-sizes (14px; 16px);
 	}
 
 	.promo-subscribe > small
@@ -290,6 +329,7 @@ html > body > header
 	}
 
 	.header-video > button::before
+	{
 		.sizes (100px; 100px);
 	}
 }

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тестовое задание</title>
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="header-logo">
+                <img src="./img/logo.svg" width="200" height="55" alt="Логотип FIX ремонт" />
+                <a href="#footer-contacts">Контакты</a>
+            </div>
+            <div class="header-promo">
+                <h1>Ремонт квартир в&nbsp;типовых домах</h1>
+                <p>Готовый дизайн-проект, работы и материалы за 3 месяца от 610 т.р.</p>
+                <div class="promo-subscribe">
+                    <a href="#subscribe" class="button">Узнайте о запуске первым</a>
+                    <small>Старт весной 2016</small>
+                </div>
+                <a href="#main-content">
+                    Листайте вниз,
+                    <br />
+                    чтобы ничего не упустить
+                </a>
+            </div>
+            <div class="header-video">
+                <img src="./img/video.jpg" alt="Заставка видео" width="940" height="920" />
+                <button>
+                    Смотреть видео
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="features container">
+            <h2 id="main-content">FIX Ремонт —&nbsp;это легко</h2>
+            <p>Готовые проекты, проверенные материалы и умелые руки</p>
+            <ul>
+                <li>
+                    <b>Опытная команда</b>
+                    <p>Команда проектировщиков и строителей со стажем работы более 6 лет</p>
+                </li>
+                <li>
+                    <b>Типовые дизайн-проекты</b>
+                    <p>Три стиля чистовой отделки «под ключ» и спектр дополнительных услуг</p>
+                </li>
+                <li>
+                    <b>Фиксированная смета</b>
+                    <p>Никаких дополнительных расходов во время ремонта. Расчет стоимости при заключении договора</p>
+                </li>
+                <li>
+                    <b>Срок работ</b>
+                    <p>3 месяца</p>
+                </li>
+            </ul>
+        </section>
+        <section class="styles container container--styles">
+            <h2>3 стиля интерьера</h2>
+            <p>Скандинавский, классический и эко-стиль</p>
+            <ul>
+                <li>
+                    <picture>
+                        <!-- 1х: 779х500; 2x: 1557x1000px -->
+                        <source type="image/webp"
+                          srcset="img/style-type-1-1x.webp 1x, img/style-type-1-2x.webp 2x" />
+                        <!-- 1х: 779х500; 2x: 1557x1000px -->
+                        <img src="img/style-type-1-1x.jpg" alt="Пример интерьера в классическом стиле" width="779" height="500"
+                          srcset="img/style-type-1-2x.jpg 2x" />
+                    </picture>
+                    <p>
+                        <span>
+                            Светлая кухня в&nbsp;классическом стиле
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <picture>
+                        <!-- 1х: 752х501; 2x: 1502x1001px -->
+                        <source type="image/webp"
+                          srcset="img/style-type-2-1x.webp 1x, img/style-type-2-2x.webp 2x" />
+                        <!-- 1х: 752х501; 2x: 1502x1001px -->
+                        <img src="img/style-type-2-1x.jpg" alt="Пример интерьера в Скандинавском стиле" width="752" height="501"
+                          srcset="img/style-type-2-2x.jpg 2x" />
+                    </picture>
+                    <p>
+                        <span>
+                            Кафельная плитка в&nbsp;ванной комнате в скандинавском стиле
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <picture>
+                        <!-- 1х: 751х500; 2x: 1501х1000px -->
+                        <source type="image/webp"
+                          srcset="img/style-type-3-1x.webp 1x, img/style-type-3-2x.webp 2x" />
+                        <!-- 1х: 751х500; 2x: 1501х1000px -->
+                        <img src="img/style-type-3-1x.jpg" alt="Пример интерьера в эко-стиле" width="751" height="500"
+                          srcset="img/style-type-3-2x.jpg 2x" />
+                    </picture>
+                    <p>
+                        <span>
+                            Гостиная в&nbsp;эко-стиле - акцент на натуральные материалы
+                        </span>
+                    </p>
+                </li>
+            </ul>
+            <div>
+                <button class="previous-slide">
+                    <span class="visually-hidden">Листать назад</span>
+                </button>
+                <button class="next-slide">
+                    <span class="visually-hidden">Листать вперед</span>
+                </button>
+            </div>
+        </section>
+        <section class="subscribe container">
+            <h2 id="subscribe">Узнайте о запуске сервиса первым</h2>
+            <form action="#" method="post">
+                <p>Первым 10 клиентам стальная входная дверь в подарок</p>
+                <label>
+                    <input
+                        type="text" name="name" placeholder="Имя и фамилия*" required
+                    />
+                    <span>Имя и фамилия*</span>
+                </label>
+                <label>
+                    <input
+                        type="email" name="email" placeholder="Е-mail адрес*" required
+                    />
+                    <span>Е-mail адрес*</span>
+                </label>
+                <label>
+                    <input
+                        type="tel" name="phone" pattern="[\+]{0,1}[78]{1}[0-9]{10}"     placeholder="Телефон"
+                    />
+                    <span>Телефон</span>
+                </label>
+                <button type="submit" class="button">Подписаться</button>
+                <small>* Обязательные для заполнения поля</small>
+                <a href="#">Политика конфиденциальности</a>
+            </form>
+            <div class="subscribe-success hidden">
+                <p>Спасибо! Мы будем держать вас в курсе обновлений</p>
+            </div>
+        </section>
+    </main>
+    <footer id="footer-contacts">
+        <div class="container">
+            <div class="footer-socials">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="visually-hidden">Facebook</span>
+                            <img src="./img/fb.svg" alt="" width="11" height="22"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="visually-hidden">ВКонтакте</span>
+                            <img src="./img/vk.svg" alt="" width="28" height="16"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="visually-hidden">Instgram</span>
+                            <img src="./img/inst.svg" alt="" width="22" height="22"/>
+                        </a>
+                    </li>
+                </ul>
+                <h2>Следите за нашим развитием</h2>
+                <p>Подпишитесь на наши аккаунты в соц. сетях, знакомьтесь с нашими проектами и тем, что нас    вдохновляет</p>
+            </div>
+            <div class="footer-contacts">
+                <a href="tel:88129035445">+7 (812) 903-54-45</a>
+                <p>
+                    Ул. Галерная, д 55,
+                    <span>Санкт-Петербург</span>
+                </p>
+                <a href="mailto:9035445@gmail.com">
+                    <span>9035445@gmail.com</span>
+                </a>
+            </div>
+        </div>
+        <p class="footer-copyright">© FIX Ремонт, 2016</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

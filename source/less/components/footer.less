@@ -1,14 +1,18 @@
 html > body > footer
 {
 	padding-top: 73px;
-	background-color: @bg-color-medium;
+
 	text-align: center;
+
+	background-color: @bg-color-medium;
 }
 
 html > body > footer h2
 {
-	.font-sizes (21px; 26px);
+	margin-top: 35px;
 	margin-bottom: 0;
+
+	.font-sizes (21px; 26px);
 	font-weight: 400;
 }
 
@@ -19,17 +23,21 @@ html > body > footer h2
 
 .footer-socials li > a
 {
-	.sizes (50px; 50px);
 	display: block;
-	background-color: @accent-color;
+
 	margin: 0 15px;
 	padding: 13px 9px;
+
+	.sizes (50px; 50px);
+
+	background-color: @accent-color;
 
 	&:hover,
 	&:focus
 	{
-		outline: none;
 		background-color: @accent-color-hover;
+
+		outline: none;
 		box-shadow: 0px 15px 20px @accent-color-shadow;
 	}
 
@@ -42,15 +50,18 @@ html > body > footer h2
 .footer-socials a img
 {
 	height: 100%;
+
 	object-fit: contain;
 }
 
 .footer-socials ul
 {
-	.list-reset();
 	display: flex;
 	justify-content: center;
+
 	margin-bottom: 32px;
+
+	.list-reset();
 }
 
 .footer-socials > p,
@@ -58,6 +69,7 @@ html > body > footer h2
 .footer-copyright
 {
 	.font-sizes (16px; 24px);
+
 	color: @main-color-medium;
 }
 
@@ -69,13 +81,15 @@ html > body > footer h2
 
 .footer-contacts
 {
-	.font-sizes (21px; 30px);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
-	margin-bottom: 60px;
+
 	padding-right: 15px;
+	margin-bottom: 60px;
+
+	.font-sizes (21px; 30px);
 	letter-spacing: -0.1px;
 }
 
@@ -83,6 +97,7 @@ html > body > footer h2
 {
 	display: flex;
 	flex-direction: column;
+
 	margin: 0 10px 8px 45px;
 }
 
@@ -93,9 +108,12 @@ html > body > footer h2
 
 	&::before
 	{
-		.sizes (30px; 24px);
-		content: "";
 		margin-right: 9px;
+
+		.sizes (30px; 24px);
+
+		content: "";
+
 		background: url("../img/phone.svg") center center no-repeat;
 	}
 
@@ -116,8 +134,9 @@ html > body > footer h2
 	&:hover,
 	&:focus
 	{
-		outline: none;
 		color: @accent-color;
+
+		outline: none;
 	}
 
 	&:active
@@ -128,9 +147,10 @@ html > body > footer h2
 
 .footer-copyright
 {
-	border-top: 1px solid @border-color;
-	margin: 0;
 	padding: 35px;
+	margin: 0;
+
+	border-top: 1px solid @border-color;
 }
 
 @media (max-width: @max-tablet-width)
@@ -142,9 +162,10 @@ html > body > footer h2
 
 	.footer-contacts > p
 	{
+		order: -1;
+
 		flex-basis: 100%;
 		margin: 0 0 20px 0;
-		order: -1;
 	}
 
 	.footer-contacts > a
@@ -168,6 +189,7 @@ html > body > footer h2
 	.footer-contacts
 	{
 		flex-direction: column;
+
 		margin-bottom: 45px;
 	}
 
