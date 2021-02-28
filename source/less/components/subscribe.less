@@ -96,11 +96,13 @@
 .subscribe label > span
 {
     .font-sizes (13px; 24px);
-    display: none;
     position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
     margin-left: 18px;
     padding: 0 7px;
-    color: @accent-color;
+    color: @main-color-medium;
     background-color: @main-color-light;
     transform: translateY(-50%);
 }
@@ -112,6 +114,7 @@
     padding: 10px 25px;
     border: 1px solid @border-color;
     border-radius: 4px;
+    outline: none;
 
     &::placeholder
     {
@@ -119,34 +122,39 @@
         color: @main-color-medium;
         opacity: 1;
     }
+
+    &:hover
+    {
+        box-shadow: 0 0 1px 2px @border-color;
+    }
 }
 
-.subscribe label:hover > input
-{
-    box-shadow: 0 0 1px 2px @border-color;
-}
-
-.subscribe label:focus-within > input
+.subscribe input:invalid
 {
     outline: none;
     box-shadow: none;
+    border-color: @accent-color;
 }
 
-.subscribe label.error > span
+.subscribe input:invalid + span
 {
     display: initial;
     color: @accent-color;
 }
 
-.subscribe label.error > input
-{
-    border-color: @accent-color;
-    box-shadow: none;
-}
-
-.subscribe label.success > span
+.subscribe input:valid + span
 {
     display: initial;
+}
+
+.subscribe input.reset
+{
+    border: 1px solid @border-color;
+}
+
+.subscribe input.reset + span
+{
+    display: none;
     color: @main-color-medium;
 }
 
