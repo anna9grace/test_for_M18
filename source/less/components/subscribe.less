@@ -21,7 +21,7 @@
     z-index: 2
 }
 
-.subscribe > p,
+.subscribe form > p,
 .subscribe-success > p
 {
     .font-sizes (16px; 24px);
@@ -188,5 +188,39 @@
     &:active
     {
         opacity: 0.7;
+    }
+}
+
+@media (max-width: @max-mobile-width)
+{
+    .subscribe
+    {
+        margin-bottom: 40px;
+        border: none;
+        text-align: center;
+    }
+
+    .subscribe h2
+    {
+        max-width: 500px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .subscribe form
+    {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .subscribe form > p
+    {
+        .font-sizes (14px; 20px);
+        margin-top: 0;
+
+        &::before
+        {
+            content: none;
+        }
     }
 }
