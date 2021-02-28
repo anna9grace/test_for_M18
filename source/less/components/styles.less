@@ -1,186 +1,186 @@
 .styles
 {
-    position: relative;
-    margin-bottom: 161px;
+	position: relative;
+	margin-bottom: 161px;
 }
 
 .styles h2
 {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .styles > p
 {
-    .font-sizes (16px; 24px);
-    margin-top: 7px;
-    margin-bottom: 50px;
-    font-weight: 500;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    color: @additional-accent-color;
+	.font-sizes (16px; 24px);
+	margin-top: 7px;
+	margin-bottom: 50px;
+	font-weight: 500;
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+	color: @additional-accent-color;
 }
 
 .styles ul
 {
-    .list-reset();
-    display: flex;
-    height: 500px;
+	.list-reset();
+	display: flex;
+	height: 500px;
 }
 
 .styles li
 {
-    display: flex;
-    position: relative;
-    flex-shrink: 0;
-    height: auto;
-    width: 100%;
-    overflow: hidden;
-    transition: left, 0.5s ease-in-out;
+	display: flex;
+	position: relative;
+	flex-shrink: 0;
+	height: auto;
+	width: 100%;
+	overflow: hidden;
+	transition: left, 0.5s ease-in-out;
 }
 
 .styles li > picture,
 .styles li > img
 {
-    flex-grow: 1;
+	flex-grow: 1;
 }
 
 .styles li img
 {
-    object-fit: cover;
-    object-position: left;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0.6;
+	object-fit: cover;
+	object-position: left;
+	min-width: 100%;
+	min-height: 100%;
+	opacity: 0.6;
 }
 
 .styles li > p
 {
-    width: 16.5%;
-    flex-grow: 0;
-    flex-shrink: 0;
-    margin: 0;
-    transition: all 0.5s;
+	width: 16.5%;
+	flex-grow: 0;
+	flex-shrink: 0;
+	margin: 0;
+	transition: all 0.5s;
 }
 
 .styles li > p span
 {
-    .font-sizes (13px; 20px);
-    display: none;
-    color: @main-color-medium;
-    transition: all 0.5s;
+	.font-sizes (13px; 20px);
+	display: none;
+	color: @main-color-medium;
+	transition: all 0.5s;
 }
 
 .styles li.active p
 {
-    width: 23%;
-    padding-left: 1%;
-    padding-right: 5%;
+	width: 23%;
+	padding-left: 1%;
+	padding-right: 5%;
 }
 
 .styles li.active > p span
 {
-    display: initial;
+	display: initial;
 }
 
 .styles li.active img
 {
-    opacity: 1;
+	opacity: 1;
 }
 
 .styles > div
 {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 23%;
-    right: 0;
-    bottom: 0;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 23%;
+	right: 0;
+	bottom: 0;
 }
 
 .styles > div > button
 {
-    .sizes (44px; 44px);
-    margin: 0 5px;
-    border: none;
-    background: url("../img/single-arrow.svg") center center no-repeat;
-    cursor: pointer;
+	.sizes (44px; 44px);
+	margin: 0 5px;
+	border: none;
+	background: url("../img/single-arrow.svg") center center no-repeat;
+	cursor: pointer;
 
-    &:first-of-type
-    {
-        transform: rotate(-180deg);
-        transform-origin: center;
-    }
+	&:first-of-type
+	{
+		transform: rotate(-180deg);
+		transform-origin: center;
+	}
 
-    &:hover
-    {
-        background-image: url("../img/single-arrow_hover.svg");
-    }
+	&:hover
+	{
+		background-image: url("../img/single-arrow_hover.svg");
+	}
 
-    &:active
-    {
-        opacity: 0.7;
-    }
+	&:active
+	{
+		opacity: 0.7;
+	}
 
-    &:disabled
-    {
-        visibility: hidden;
-    }
+	&:disabled
+	{
+		visibility: hidden;
+	}
 }
 
 @media (max-width: @max-tablet-width)
 {
-    .styles ul
-    {
-        height: max-content;
-    }
+	.styles ul
+	{
+		height: max-content;
+	}
 
-    .styles li img
-    {
-        display: block;
-        height: 35vw;
-    }
+	.styles li img
+	{
+		display: block;
+		height: 35vw;
+	}
 }
 
 @media (max-width: @max-mobile-width)
 {
-    .styles
-    {
-        margin-bottom: 90px;
-    }
+	.styles
+	{
+		margin-bottom: 90px;
+	}
 
-    .styles h2,
-    .styles > p
-    {
-        margin-left: 15px;
-        margin-right: 15px;
-        text-align: center;
-    }
+	.styles h2,
+	.styles > p
+	{
+		margin-left: 15px;
+		margin-right: 15px;
+		text-align: center;
+	}
 
-    .styles li
-    {
-        flex-direction: column;
-    }
+	.styles li
+	{
+		flex-direction: column;
+	}
 
-    .styles li img,
-    .styles > div > button
-    {
-        height: 65vw;
-    }
+	.styles li img,
+	.styles > div > button
+	{
+		height: 65vw;
+	}
 
-    .styles li > p,
-    .styles li.active p
-    {
-        height: 70px;
-        width: auto;
-        padding: 10px 10px 0;
-        text-align: center;
-    }
+	.styles li > p,
+	.styles li.active p
+	{
+		height: 70px;
+		width: auto;
+		padding: 10px 10px 0;
+		text-align: center;
+	}
 
-    .styles > div
-    {
-        justify-content: space-between;
-        width: 100%;
-        bottom: 70px;
-        z-index: 1;
-    }
+	.styles > div
+	{
+		justify-content: space-between;
+		width: 100%;
+		bottom: 70px;
+		z-index: 1;
+	}
 }

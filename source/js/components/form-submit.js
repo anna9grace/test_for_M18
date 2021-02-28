@@ -7,45 +7,45 @@ const successMessage = document.querySelector( ".subscribe-success" );
 
 if ( form &&  submitBtn && formFields.length > 0 && successMessage )
 {
-    const resetFields = () =>
-    {
-        for ( const field of formFields ) {
-            if ( !field.value )
-            {
-                field.classList.add( "reset" );
-            }
+	const resetFields = () =>
+	{
+		for ( const field of formFields ) {
+			if ( !field.value )
+			{
+				field.classList.add( "reset" );
+			}
 
-            field.addEventListener( "focus", () =>
-            {
-                field.classList.remove( "reset" );
-            } )
-            submitBtn.addEventListener( "click", activateFields )
-        }
-    }
+			field.addEventListener( "focus", () =>
+			{
+				field.classList.remove( "reset" );
+			} )
+			submitBtn.addEventListener( "click", activateFields )
+		}
+	}
 
-    const activateFields = () =>
-    {
-        for ( const field of formFields ) {
-            field.classList.remove( "reset" );
-        }
-    }
+	const activateFields = () =>
+	{
+		for ( const field of formFields ) {
+			field.classList.remove( "reset" );
+		}
+	}
 
-    form.addEventListener( "submit", ( evt ) =>
-    {
-        evt.preventDefault();
+	form.addEventListener( "submit", ( evt ) =>
+	{
+		evt.preventDefault();
 
-        successMessage.classList.remove( "hidden" );
+		successMessage.classList.remove( "hidden" );
 
-        setTimeout( () =>
-        {
-            successMessage.classList.add( "hidden" );
+		setTimeout( () =>
+		{
+			successMessage.classList.add( "hidden" );
 
-        }, 2000 );
+		}, 2000 );
 
-        form.reset();
+		form.reset();
 
-        resetFields();
-    } )
+		resetFields();
+	} )
 
-    resetFields();
+	resetFields();
 }
