@@ -6,3 +6,23 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+@media (max-width: @max-tablet-width)
+{
+    .container
+    {
+        width: 80%;
+        min-width: auto;
+        max-width: 750px;
+    }
+}
+
+@media (max-width: @max-mobile-width)
+{
+    .container
+    {
+        width: 100%;
+        // min-width: auto;
+        // max-width: 750px;
+    }
+}
